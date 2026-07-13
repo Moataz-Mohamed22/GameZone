@@ -1,3 +1,4 @@
+
 namespace GameZone
 {
     public class Program
@@ -7,8 +8,10 @@ namespace GameZone
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            string connectionString = builder.Configuration.GetConnectionString("constr") ?? throw new InvalidOperationException("No Connection String was Found");
+            builder.Services.AddDbContext<AppDbContext>(options =>options.UseSqlServer(connectionString));
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddScoped<ICategoriesServices, CategoriesServices>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
