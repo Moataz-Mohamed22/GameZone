@@ -1,20 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using GameZone.Attributes;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GameZone.ViewModels
 {
-    public class CreateGameFormVM
+    public class CreateGameFormVM:BaseVM
     {
-        [MaxLength(250)]
-        public string Name { get; set; } = string.Empty;
-        [Display(Name= "Category")]
-        public int CategoryId { get; set; }
-        public IEnumerable<SelectListItem> Categories { get; set; } = Enumerable.Empty<SelectListItem>();
-        [Display(Name = "Supported Devices")]
-
-        public List<int> SelectedDevices { get; set; }=new List<int>();
-        public IEnumerable<SelectListItem> Devices { get; set; } = Enumerable.Empty<SelectListItem>();
-        public string Description { get; set; } = string.Empty;
-
+  
+        
+        [AllowedExtensions(FileSettings.AllowedExtension),MaxFileSize(FileSettings.MaxFileSaizeInBytes)]
         public IFormFile Cover { get; set; } =default!;
 
     }
