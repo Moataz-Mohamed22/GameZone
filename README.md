@@ -170,7 +170,7 @@ Update-Database
 
 Watch the GameZone demo here:
 
-[Watch Demo Video]([ضع_رابط_الفيديو_هنا](https://drive.google.com/drive/u/0/my-drive?sort=13&direction=a))
+[Watch Demo Video](https://youtu.be/wq5euoXvkZY)
 
 
 
