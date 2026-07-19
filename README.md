@@ -90,7 +90,7 @@ Before running the project, make sure you have:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/GameZone.git
+git clone https://github.com/Moataz-Mohamed22/GameZone.git
 cd GameZone
 ```
 
